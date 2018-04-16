@@ -21,7 +21,7 @@ public class Bicycle {
     }
         
     public void applyBrake(int decrement) {
-        speed += decrement;
+        speed -= decrement;
     }
         
     public void speedUp(int increment) {
