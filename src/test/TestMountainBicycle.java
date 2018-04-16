@@ -1,37 +1,30 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import com.MountainBicycle;
 
-class TestMountainBicycle {
+public class TestMountainBicycle {
 
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@Test
-	void testSetHeight() {
-		MountainBicycle Tango = new MountainBicycle(5, 3 , 40, 1);
-		Tango.setHeight(9);
-		assertEquals(Tango.seatHeight,9);
+	@Before
+	public void setUp() throws Exception {
 	}
 
 	@Test
-	void testSetGear() {
+	public void testApplyBrake() {
 		MountainBicycle Tango = new MountainBicycle(5, 3 , 40, 1);
-		Tango.setGear(5);
-		assertEquals(Tango.gear, 5);
+		Tango.applyBrake(10);
+		assertEquals(30, Tango.speed);
 	}
-	
+
 	@Test
-	void testspeedUp() {
+	public void testSpeedUp() {
 		MountainBicycle Tango = new MountainBicycle(5, 3 , 40, 1);
-		Tango.speedUp(5);
-		assertEquals(Tango.speed, 45);
+		Tango.speedUp(10);
+		assertEquals(50, Tango.speed);
 	}
-	
+
 }

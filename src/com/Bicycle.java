@@ -1,6 +1,6 @@
 package com;
 
-class Bicycle {
+public class Bicycle {
 	public String name="No data available";
     public int cadence;
     public int gear;
@@ -21,7 +21,7 @@ class Bicycle {
     }
         
     public void applyBrake(int decrement) {
-        speed -= decrement;
+        speed += decrement;
     }
         
     public void speedUp(int increment) {
